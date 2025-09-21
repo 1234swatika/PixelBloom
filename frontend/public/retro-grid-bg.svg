@@ -1,0 +1,64 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#70a9a1" stroke-width="1" opacity="0.3"/>
+    </pattern>
+    <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#40798c" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="fadeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#70a9a1;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#40798c;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1f363d;stop-opacity:0.1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#000"/>
+  
+  <!-- Grid patterns -->
+  <rect width="800" height="600" fill="url(#smallGrid)"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  
+  <!-- Gradient overlay -->
+  <rect width="800" height="600" fill="url(#fadeGradient)"/>
+  
+  <!-- Central glow effect -->
+  <circle cx="400" cy="300" r="200" fill="none" stroke="#70a9a1" stroke-width="2" opacity="0.4" filter="url(#glow)"/>
+  <circle cx="400" cy="300" r="150" fill="none" stroke="#40798c" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="300" r="100" fill="none" stroke="#ff00ff" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Retro scan lines -->
+  <g opacity="0.1">
+    <line x1="0" y1="50" x2="800" y2="50" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="250" x2="800" y2="250" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="350" x2="800" y2="350" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="450" x2="800" y2="450" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="500" x2="800" y2="500" stroke="#70a9a1" stroke-width="1"/>
+    <line x1="0" y1="550" x2="800" y2="550" stroke="#70a9a1" stroke-width="1"/>
+  </g>
+  
+  <!-- Corner accent lines -->
+  <g stroke="#ff5f6d" stroke-width="2" opacity="0.6">
+    <line x1="0" y1="0" x2="100" y2="0"/>
+    <line x1="0" y1="0" x2="0" y2="100"/>
+    <line x1="700" y1="0" x2="800" y2="0"/>
+    <line x1="800" y1="0" x2="800" y2="100"/>
+    <line x1="0" y1="500" x2="0" y2="600"/>
+    <line x1="0" y1="600" x2="100" y2="600"/>
+    <line x1="700" y1="600" x2="800" y2="600"/>
+    <line x1="800" y1="500" x2="800" y2="600"/>
+  </g>
+</svg>
