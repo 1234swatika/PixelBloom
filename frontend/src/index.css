@@ -1,19 +1,46 @@
+:root {
+  /* CSS HEX */
+  --castleton-green: #045844;
+  --black: #000000;
+  --light-green: #81ECA6;
+  --mindaro: #F9F995;
+  --fairy-tale: #FCCBE2;
+  --wisteria: #D093F2;
+  --celeste: #A5F3F4;
+  --fairy-tale-2: #FDCCDC;
+  --hunyadi-yellow: #FCBE63;
+  --baby-powder: #F8F7F3;
+  
+  /* CSS HSL */
+  --castleton-green-hsl: hsla(166, 91%, 18%, 1);
+  --black-hsl: hsla(0, 0%, 0%, 1);
+  --light-green-hsl: hsla(141, 74%, 72%, 1);
+  --mindaro-hsl: hsla(60, 89%, 78%, 1);
+  --fairy-tale-hsl: hsla(332, 89%, 89%, 1);
+  --wisteria-hsl: hsla(279, 79%, 76%, 1);
+  --celeste-hsl: hsla(181, 78%, 80%, 1);
+  --fairy-tale-2-hsl: hsla(340, 92%, 90%, 1);
+  --hunyadi-yellow-hsl: hsla(36, 96%, 69%, 1);
+  --baby-powder-hsl: hsla(48, 26%, 96%, 1);
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #111;
-  color: #fff;
+  background: var(--castleton-green);
+  color: var(--baby-powder);
 }
 
 .auth {
-  background: #222;
+  background: var(--black);
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
   width: 300px;
+  border: 2px solid var(--light-green);
 }
 
 input {
@@ -21,15 +48,30 @@ input {
   padding: 0.5rem;
   margin: 0.5rem 0;
   border-radius: 5px;
-  border: none;
+  border: 2px solid var(--celeste);
+  background: var(--baby-powder);
+  color: var(--black);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--wisteria);
+  box-shadow: 0 0 5px var(--wisteria);
 }
 
 button {
   padding: 0.5rem 1rem;
-  border: none;
-  background: #0ff;
-  color: #000;
+  border: 2px solid var(--hunyadi-yellow);
+  background: var(--mindaro);
+  color: var(--black);
   cursor: pointer;
   border-radius: 5px;
   margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--hunyadi-yellow);
+  border-color: var(--fairy-tale);
+  box-shadow: 0 0 10px var(--fairy-tale);
 }
